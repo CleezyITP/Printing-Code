@@ -1,9 +1,7 @@
-//Printing-Code Assignment 1
+Printing-Code Assignment 1
 =============
 
-//Printing Code
-
-//Assignment A
+//Printing Code Assignment A
 
 import processing.pdf.*;
 
