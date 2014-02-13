@@ -1,0 +1,43 @@
+import processing.pdf.*;
+
+// Set these variables to the print size you want (in inches)
+// The resulting PDF will be this aspect ratio
+float print_width = 8.5;
+float print_height = 11;
+
+// This will help make the sketch window bigger
+float make_bigger = 50;
+
+
+/*  Setup
+ _________________________________________________________________ */
+
+void setup(){
+  
+  size(round(print_width * make_bigger), round(print_height * make_bigger));
+  size(800, 800);
+
+  beginRecord(PDF, "watery.pdf"); 
+
+  smooth();
+  stroke(255);
+  noFill();
+  translate(width/2-275, height/2-200);
+  background(0);
+  beginShape();
+
+
+
+
+  for (int j = 0; j < width/3; j+=3) {
+    beginShape();
+    vertex(0, 0);
+    bezierVertex(79, 47, 10, 23, 15+j, 51);
+    bezierVertex(119, 72, 4, 109, 112+j, 143);
+    bezierVertex(154, 301, 181, 196, 296+j, 353);
+
+
+    endShape();
+  }
+  endRecord();
+}
