@@ -1,0 +1,134 @@
+import processing.pdf.*;
+
+// Set these variables to the print size you want (in inches)
+// The resulting PDF will be this aspect ratio
+float print_width = 8.5;
+float print_height = 11;
+
+// This will help make the sketch window bigger
+float make_bigger = 150;
+
+
+/*  Setup
+ _________________________________________________________________ */
+
+void setup(){
+  
+  size(round(print_width * make_bigger), round(print_height * make_bigger));
+  beginRecord(PDF, "watery.pdf"); 
+  smooth();
+  size(800, 800); 
+  stroke(255);
+  noFill();  
+  translate(-300, 0);
+}
+
+void draw(){
+  background(0);
+  //for (int i=0; i<width;i++){
+  //for (int j = 0; j < width/2; j+=20) {
+      
+  beginShape();  
+  int control1_1X = width/2+42;
+  int control1_1Y = height/2-2;
+  int control1_2X = width/2+38;
+  int control1_2Y = height/2+2;
+  
+  int control2_1X = width/2-2;
+  int control2_1Y = height-3;
+  int control2_2X = width/2+2;
+  int control2_2Y = height+3;
+  
+  int control3_1X = width/2-42;
+  int control3_1Y = height/2+2;
+  int control3_2X = width/2-38;
+  int control3_2Y = height/2-2;
+  
+  
+  int control4_1X = width/2-2;
+  int control4_1Y = -1;
+  int control4_2X = width/2+2;
+  int control4_2Y = 3;
+  
+  vertex(width/2, 10);
+  bezierVertex(control1_1X, control1_1Y, control1_2X, control1_2Y, width/2+40, height/2);
+  bezierVertex(control2_1X, control2_1Y, control2_2X, control2_2Y, width/2, height-10);
+  bezierVertex(control3_1X, control3_1Y, control3_2X, control3_2Y, width/2-40, height/2); 
+  bezierVertex(control4_1X, control4_1Y, control4_2X, control4_2Y, width/2, 10);
+  endShape();
+
+beginShape();  
+  int control5_1X = width/2+42-40;
+  int control5_1Y = height/2-2;
+  int control5_2X = width/2+38-40;
+  int control5_2Y = height/2+2;
+  
+  int control6_1X = width/2-2-40;
+  int control6_1Y = height-3;
+  int control6_2X = width/2+2-40;
+  int control6_2Y = height+3;
+  
+  int control7_1X = width/2-42-40;
+  int control7_1Y = height/2+2;
+  int control7_2X = width/2-38-40;
+  int control7_2Y = height/2-2;
+  
+  
+  int control8_1X = width/2-2-40;
+  int control8_1Y = -1;
+  int control8_2X = width/2+2-40;
+  int control8_2Y = 3;
+  
+  vertex(width/2-40, 10);
+  bezierVertex(control5_1X, control5_1Y, control5_2X, control5_2Y, width/2+40-40, height/2);
+  bezierVertex(control6_1X, control6_1Y, control6_2X, control6_2Y, width/2-40, height-10);
+  bezierVertex(control7_1X, control7_1Y, control7_2X, control7_2Y, width/2-40-40, height/2); 
+  bezierVertex(control8_1X, control8_1Y, control8_2X, control8_2Y, width/2-40, 10);
+  endShape();
+
+  beginShape();  
+  int controla_1X = width/2+42-20;
+  int controla_1Y = height/2-2;
+  int controla_2X = width/2+38-20;
+  int controla_2Y = height/2+2;
+  
+  int controlb_1X = width/2-2-20;
+  int controlb_1Y = height-3;
+  int controlb_2X = width/2+2-20;
+  int controlb_2Y = height+3;
+  
+  int controlc_1X = width/2-42-20;
+  int controlc_1Y = height/2+2;
+  int controlc_2X = width/2-38-20;
+  int controlc_2Y = height/2-2;
+  
+  
+  int controld_1X = width/2-2-20;
+  int controld_1Y = -1;
+  int controld_2X = width/2+2-20;
+  int controld_2Y = 3;
+  
+  vertex(width/2-20, 10);
+  bezierVertex(controla_1X, controla_1Y, controla_2X, controla_2Y, width/2+20, height/2);
+  bezierVertex(controlb_1X, controlb_1Y, controlb_2X, controlb_2Y, width/2-20, height-10);
+  bezierVertex(controlc_1X, controlc_1Y, controlc_2X, controlc_2Y, width/2-60, height/2); 
+  bezierVertex(controld_1X, controld_1Y, controld_2X, controld_2Y, width/2-20, 10);
+  endShape();
+
+  
+   endRecord();
+    
+  
+  }
+  
+
+  
+  
+
+  
+  
+//  stroke(255,0,0);
+//  line(control1_1X,control1_1Y-2,control1_2X,control1_2Y-2);
+//  line(control2_1X,control2_1Y+2,control2_2X,control2_2Y+2);
+
+ 
